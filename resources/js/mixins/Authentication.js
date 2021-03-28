@@ -9,7 +9,7 @@ export const authentication = {
             let call_back_url = process.env.VUE_APP_CALL_BACK_URL
 
             let app = this;
-            this.createCookie('connect_' + scopeType)
+            this.createCookie('connect_' + scopeType);
 
             const myUrl = new URL(nylas_auth_url);
             myUrl.searchParams.append("login_hint", emailHint);
@@ -20,6 +20,7 @@ export const authentication = {
             myUrl.searchParams.append("state", "CSRF_TOKEN");
 
             var win = window.open(myUrl, "MsgWindow", "width=600,height=800");
+            console.log(myUrl);
 
             var checkConnect;
             checkConnect = setInterval(function() {
