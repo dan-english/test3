@@ -1,0 +1,33 @@
+{% extends 'auth/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="cover-container d-flex h-100 p-3 mx-auto my-5 flex-column">
+            <h1>Authentication Callback</h1>
+
+            <table class="table">
+                <tr><td>Date</td><td></td></tr>
+                <tr>
+                    <td>Provider</td>
+                    <td>{{ provider }}</td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>{{ email_address }}</td>
+                </tr>
+                <tr>
+                    <td>Nylas Account Id</td>
+                    <td>{{ nylas_account_id }}</td>
+                </tr>
+                <tr>
+                    <td>Nylas Access Token</td>
+                    <td>{{ nylas_access_token }}</td>
+                </tr>
+            </table>
+    </div>
+</div>
+<script>
+//closing this will trigger the parent to refresh
+parent.close();
+</script>
+{% endblock %}

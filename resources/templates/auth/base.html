@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <link id="favicon" href="https://files.readme.io/dde3d5d-small-favicon-96x96.png" rel="shortcut icon" type="image/png">
+    <title>Demo Center</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+
+    {% block css %}{% endblock %}
+      <script src="https://unpkg.com/@nylas/components-composer"></script>
+
+    <script>
+        var app_debug = 1;
+    </script>
+<script src="/console_debug.js"></script>
+<link rel="stylesheet" href="/static/chalk-theme.css">
+
+<style>
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:13px;
+background-color:#f7f7f7;
+  overflow-y: scroll!important; /* Show vertical scrollbar */
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper" id="app" style="background-color:#f7f7f7">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <a class="navbar-brand" href="/">Demo Center</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    {% block nav %}
+        <div class="navbar-collapse d-lg-flex justify-content-end collapse" id="navbar">
+            <ul class="navbar-nav">
+                {% if auth() %}
+                                        <li>
+                        <a class="nav-link" href="/inbox">Inbox</a>
+                    </li>
+                   <li>
+                        <a class="nav-link" target="_blank" href="/console">Console</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/profile">Profile</a>
+
+                    </li>
+                <li>
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    {% endblock %}
+    </nav>
+
+    <div class="content" style="margin-top:10px">
+            {% block content %}{% endblock %}
+    </div>
+
+
+    <div>
+    <console-drawer-component></console-drawer-component>
+    </div>
+
+</div>
+
+
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://momentjs.com/downloads/moment-timezone-with-data-1970-2030.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/element-ui/lib/umd/locale/en.js"></script>
+
+
+<script>
+  ELEMENT.locale(ELEMENT.lang.en)
+</script>
+<script src="/app.js"></script>
+
+</body>
+</html>

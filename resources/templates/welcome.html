@@ -1,0 +1,22 @@
+{% if exists('auth/base') %}
+    {% extends 'auth/base.html' %}
+{% else %}
+    {% extends 'base.html' %}
+{% endif %}
+
+{% block css %}
+<!-- Application CSS -->
+<link href="/static/style.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title %} 
+    Demo Center V3
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="title m-b-md">
+        Nylas Demo Center
+    </div>
+</div>
+{% endblock %}

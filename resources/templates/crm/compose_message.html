@@ -1,0 +1,33 @@
+{% extends 'auth/base.html' %}
+{% block css %}
+    <style>
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="container-fluid">
+<div class="row">
+                    <div class="col-md-1">
+                    <sidebar-component></sidebar-component>
+                        </div>
+                    <div class="col-md-10">
+
+
+<nylas-composer  id="bfccecff-dbac-4464-9187-3de7aa16cc45"></nylas-composer>
+
+                    </div>
+    </div>
+    </div>
+</div>
+    <script>
+    const composer = document.getElementById('bfccecff-dbac-4464-9187-3de7aa16cc45')
+    composer.visible=0;
+    composer.show_header=0;
+                // to show the composer (if attribute "visible" is set to false)
+              // composer.open();
+
+              // to close the composer
+              // composer.close();
+    </script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "webpack --mode development",
+        "watch": "webpack --mode development --watch",
+        "prod": "webpack --mode production",
+        "start": "webpack --mode production",
+        "build": "webpack --mode production",
+        "hot": "webpack serve --mode development"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.13",
+        "@babel/preset-env": "^7.13.12",
+        "babel-loader": "^8.2.2",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.30.0",
+        "sass-loader": "^7.3.1",
+        "webpack": "^5.28.0"
+    },
+    "dependencies": {
+        "css-loader": "^5.2.0",
+        "dotenv": "^8.2.0",
+        "style-loader": "^2.0.0",
+        "vue-loader": "^15.9.6",
+        "vue-template-compiler": "^2.6.12",
+        "webpack-cli": "^4.6.0"
+    }
+}

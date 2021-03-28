@@ -1,0 +1,126 @@
+.cancel_button {
+  background-color:#7ebfbf
+  }
+
+
+.update_button {
+  background-color:red
+}
+.el-radio__label {
+  display:none!important;
+}
+
+
+
+
+/** open hours display **/
+.openhourstable {
+  text-align:left;
+}
+.daytag {
+  width:100px;
+  font-size:15px;
+  margin:3px;
+}
+
+.openhour {
+  margin:3px;
+}
+
+
+
+
+
+/** profile styles **/
+.wrapper_container {
+    background-color:white;
+    border:1px solid #ccc;
+  margin-bottom:10px;
+}
+.row_box{
+  background-color:white;
+  border:1px solid #ccc;
+  margin-left:5px;
+  margin-right:5px;
+  padding-bottom:10px;
+  margin-bottom:10px;
+  text-align:left;
+}
+
+.row_header {
+  border-bottom:1px solid #ccc;
+  font-size:20px;
+  padding-left:5px;
+  text-align:left;
+  margin-top:0px;
+  margin-bottom:10px;
+}
+
+.row_header_button_advanced {
+   color:#E6A23C;
+  background-color:#fdf6ec;
+  border:1px solid #f5dab1;
+}
+
+.row_header_button_easy {
+   color:#909399;
+  background-color:#f4f4f5;
+  border:1px solid #d3d4d6;
+}
+
+.row_header_button {
+  height:20px;
+  line-height:10px;
+
+  font-size:11px;
+  border-radius:3px;
+  text-align:center;
+  margin:5px;
+  padding-top:3px;
+  width:70px;
+  float:right;
+}
+
+.row_header_description {
+  font-size:11px;
+  width:70%;
+  float:left;
+}
+.row_header_description_full {
+
+  width:100%;
+
+}
+.row_header_description h3{
+  font-size:14px;
+  font-weight:bold;
+  text-align:left;
+  padding-top:10px;
+
+}
+.desc_image {
+  float:right;
+  padding:10px;
+}
+
+@media only screen and (max-width: 770px) {
+  .row_header_description{
+    width:100%!important;
+  }
+  .desc_image {
+    display:none;
+  }
+}
+.ticklist {
+  text-align:left;
+  margin:0px;
+  padding-top:10px
+}
+.ticklist li {
+  list-style:none;
+}
+.green_tick{
+  color:green;
+  padding-right:5px;
+  font-weight:bold;
+}

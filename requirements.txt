@@ -1,0 +1,6 @@
+masonite>=3.0,<4.0
+masonite-logging>=1.0,<2.0
+masonite-validation>=3.0,<4.0
+gunicorn==19.9.0
+pusher==3.0.0
+pymysql==1.0.2
