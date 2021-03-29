@@ -16,7 +16,11 @@ export const authentication = {
             myUrl.searchParams.append("scopes", scopes);
             myUrl.searchParams.append("state", "CSRF_TOKEN");
 
-            console.log(myUrl);
+            _debug.group('Hosted Authentication');
+            _debug.log(myUrl);
+            _debug.log(nylas_app_client_id);
+            _debug.log(nylas_call_back_url);
+            _debug.groupEnd();
 
             var win = window.open(myUrl, "MsgWindow", "width=600,height=800");
 
