@@ -3,10 +3,7 @@ export const authentication = {
     methods: {
 
         do_hosted_auth(emailHint, scopeType, scopes ) {
-
-            let nylas_auth_url = process.env.VUE_APP_NYLAS_OAUTH_ENDPOINT
-            let nylas_app_client_id = process.env.VUE_APP_NYLAS_APP_CLIENT_ID
-            let call_back_url = process.env.VUE_APP_CALL_BACK_URL
+            let nylas_auth_url = 'https://api.nylas.com/oauth/authorize';
 
             let app = this;
             this.createCookie('connect_' + scopeType)
@@ -15,7 +12,7 @@ export const authentication = {
             myUrl.searchParams.append("login_hint", emailHint);
             myUrl.searchParams.append("client_id", nylas_app_client_id);
             myUrl.searchParams.append("response_type", "token");
-            myUrl.searchParams.append("redirect_uri", call_back_url);
+            myUrl.searchParams.append("redirect_uri", nylas_call_back_url);
             myUrl.searchParams.append("scopes", scopes);
             myUrl.searchParams.append("state", "CSRF_TOKEN");
 

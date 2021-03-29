@@ -97,6 +97,9 @@
                    <el-tag size="mini" style="font-size:8px;margin:3px;" plain v-if="file.filename" v-for="(file, index) in latest_message.files" :key="index">{{file.filename}}</el-tag>
                </div>
 
+
+
+
 <div v-if="signature" class="row" style="padding-top:10px;border-top:1px solid #ccc;">
   <div class="col-md-6">
                     <div>

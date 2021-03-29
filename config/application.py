@@ -19,6 +19,9 @@ application. If disabled, a simple generic error page is shown
 """
 
 DEBUG = env("APP_DEBUG", False)
+CALL_BACK_URL=env("VUE_APP_CALL_BACK_URL", False)
+NYLAS_CLIENT_ID=env("VUE_APP_NYLAS_APP_CLIENT_ID", False)
+
 
 """Secret Key
 This key is used to encrypt and decrypt various values. Out of the box
