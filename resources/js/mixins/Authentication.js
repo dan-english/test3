@@ -17,7 +17,7 @@ export const authentication = {
             myUrl.searchParams.append("state", "CSRF_TOKEN");
 
             console.log(myUrl);
-            
+
             var win = window.open(myUrl, "MsgWindow", "width=600,height=800");
 
             var checkConnect;
